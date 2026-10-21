@@ -1,45 +1,22 @@
 {
   "$schema": "https://mintlify.com/docs.json",
+  "name": "TaskFlow Developer Hub",
   "theme": "mint",
-  "name": "TaskFlow Docs",
-  "colors": {
-    "primary": "#2563EB",
-    "light": "#60A5FA",
-    "dark": "#1D4ED8"
-  },
+  "colors": {"primary": "#5B5BD6", "light": "#7777E8", "dark": "#4545B5"},
   "favicon": "/favicon.svg",
+  "logo": {"light": "/logo/light.svg", "dark": "/logo/dark.svg"},
   "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      },
-      {
-        "group": "Guides",
-        "pages": [
-          "guides/first-guide"
-        ]
-      }
+    "tabs": [
+      {"tab": "Documentation", "groups": [
+        {"group": "Start here", "pages": ["index", "quickstart", "installation"]},
+        {"group": "Guides", "pages": ["guides/create-task", "guides/authentication", "guides/errors"]},
+        {"group": "Concepts", "pages": ["concepts/tasks", "demo-checklist"]}
+      ]},
+      {"tab": "API reference", "openapi": "openapi.json"}
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Mintlify Docs",
-        "href": "https://mintlify.com/docs"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Get Started",
-      "href": "/quickstart"
-    }
+  "api": {
+    "playground": {"display": "interactive", "proxy": true},
+    "examples": {"languages": ["curl", "python", "javascript"], "defaults": "required"}
   }
 }

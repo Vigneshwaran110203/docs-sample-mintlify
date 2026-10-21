@@ -1,0 +1,24 @@
+---
+title: "Authentication concepts"
+description: "Understand how authentication would work in a production API."
+---
+
+# Authentication concepts
+
+A production TaskFlow API would protect private task data with an access token.
+
+```bash
+curl https://api.example.com/v1/tasks \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
+
+Replace the example URL and token with values supplied by the real API owner.
+
+<Warning>The public JSONPlaceholder endpoint used by this demo does not enforce TaskFlow authentication. Never enter real credentials or secrets in this demo.</Warning>
+
+## Recommended practices
+
+- Keep tokens out of source control.
+- Use HTTPS.
+- Grant only the permissions required.
+- Rotate or revoke exposed credentials.

@@ -1,0 +1,24 @@
+---
+title: "Create a task"
+description: "Send a sample request that creates a task-shaped record."
+---
+
+# Create a task
+
+The demo includes `POST /todos`, backed by JSONPlaceholder.
+
+```bash
+curl -X POST https://jsonplaceholder.typicode.com/todos \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Prepare release notes","completed":false,"userId":1}'
+```
+
+A sample response may contain a generated ID:
+
+```json
+{"title":"Prepare release notes","completed":false,"userId":1,"id":201}
+```
+
+<Note>The write response is simulated. This public demo API does not permanently store the record.</Note>
+
+A production API should validate the request, authenticate the caller, enforce permissions, save data, and return a stable identifier.

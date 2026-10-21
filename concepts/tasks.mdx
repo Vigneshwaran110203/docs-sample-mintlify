@@ -1,0 +1,24 @@
+---
+title: "Task model"
+description: "Understand the fields used in the TaskFlow task examples."
+---
+
+# Task model
+
+| Field | Type | Description |
+|---|---|---|
+| `id` | integer | Unique task identifier. |
+| `userId` | integer | User responsible for the task. |
+| `title` | string | Short task description. |
+| `completed` | boolean | Whether the task is complete. |
+
+```json
+{
+  "id": 1,
+  "userId": 1,
+  "title": "Prepare release notes",
+  "completed": false
+}
+```
+
+These fields mirror JSONPlaceholder's `/todos` resources for demo purposes.

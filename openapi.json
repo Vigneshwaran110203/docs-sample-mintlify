@@ -1,0 +1,89 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "TaskFlow Demo API",
+    "version": "1.0.0",
+    "description": "OpenAPI-powered demo using JSONPlaceholder. Write operations are simulated."
+  },
+  "servers": [{"url": "https://jsonplaceholder.typicode.com", "description": "Public mock API"}],
+  "tags": [{"name": "Tasks", "description": "Sample task resources"}],
+  "paths": {
+    "/todos": {
+      "get": {
+        "tags": ["Tasks"],
+        "summary": "List tasks",
+        "operationId": "listTasks",
+        "parameters": [{"name": "_limit", "in": "query", "required": false, "schema": {"type": "integer", "default": 5, "minimum": 1, "maximum": 20}, "description": "Maximum number of sample tasks"}],
+        "responses": {"200": {"description": "List of sample tasks", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/Task"}}}}}}
+      },
+      "post": {
+        "tags": ["Tasks"],
+        "summary": "Create a task",
+        "description": "Simulates creating a task; changes are not persisted.",
+        "operationId": "createTask",
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/CreateTask"}, "example": {"userId": 1, "title": "Prepare release notes", "completed": false}}}},
+        "responses": {"201": {"description": "Simulated created task", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Task"}}}}}
+      }
+    },
+    "/todos/{id}": {
+      "get": {
+        "tags": ["Tasks"],
+        "summary": "Get a task",
+        "operationId": "getTask",
+        "parameters": [{"name": "id", "in": "path", "required": true, "description": "Try 1", "schema": {"type": "integer", "minimum": 1, "default": 1}}],
+        "responses": {
+          "200": {
+            "description": "Task found",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/Task"},
+                "example": {"userId": 1, "id": 1, "title": "delectus aut autem", "completed": false}
+              }
+            }
+          },
+          "404": {"description": "Task not found"}
+        }
+      },
+      "patch": {
+        "tags": ["Tasks"],
+        "summary": "Update a task",
+        "description": "Simulates updating a task; changes are not persisted.",
+        "operationId": "updateTask",
+        "parameters": [{"name": "id", "in": "path", "required": true, "description": "Try 1", "schema": {"type": "integer", "default": 1}}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/UpdateTask"}, "example": {"completed": true}}}},
+        "responses": {"200": {"description": "Simulated updated task", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Task"}}}}}
+      },
+      "delete": {
+        "tags": ["Tasks"],
+        "summary": "Delete a task",
+        "description": "Simulates deleting a task; the sample record remains available.",
+        "operationId": "deleteTask",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "integer", "default": 1}}],
+        "responses": {"200": {"description": "Simulated deletion response"}}
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Task": {
+        "type": "object",
+        "properties": {
+          "userId": {"type": "integer"},
+          "id": {"type": "integer"},
+          "title": {"type": "string"},
+          "completed": {"type": "boolean"}
+        },
+        "required": ["userId", "id", "title", "completed"]
+      },
+      "CreateTask": {
+        "type": "object",
+        "properties": {"userId": {"type": "integer", "example": 1}, "title": {"type": "string", "example": "Prepare release notes"}, "completed": {"type": "boolean", "default": false}},
+        "required": ["userId", "title"]
+      },
+      "UpdateTask": {
+        "type": "object",
+        "properties": {"title": {"type": "string"}, "completed": {"type": "boolean"}}
+      }
+    }
+  }
+}

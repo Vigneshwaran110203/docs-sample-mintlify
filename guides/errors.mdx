@@ -1,0 +1,23 @@
+---
+title: "Errors and troubleshooting"
+description: "Understand common HTTP errors and how to troubleshoot requests."
+---
+
+# Errors and troubleshooting
+
+| Status | Meaning | What to check |
+|---|---|---|
+| `400` | Bad request | Validate parameters and request body. |
+| `401` | Unauthorized | Check whether the token is present and valid. |
+| `403` | Forbidden | Check permissions. |
+| `404` | Not found | Verify the resource ID and path. |
+| `429` | Too many requests | Respect rate limits and retry guidance. |
+| `500` | Server error | Report persistent failures. |
+
+## Debugging checklist
+
+1. Confirm the base URL and HTTP method.
+2. Check required parameters.
+3. Set `Content-Type: application/json` for JSON bodies.
+4. Inspect the status code and response body.
+5. Never share secrets in screenshots or public issue reports.
