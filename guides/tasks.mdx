@@ -12,8 +12,9 @@ Use `GET /tasks/1` to retrieve a task.
 ```json
 {
   "id": 1,
-  "title": "Prepare report"
+  "title": "Prepare report",
+  "priority": "high"
 }
 ```
 
-The response contains the task ID and title.
+The response contains the task ID, title, and priority. The `priority` field is a string set to `low`, `medium`, or `high`. See [Task priority](/guides/task-priority) to change it.
