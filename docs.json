@@ -9,7 +9,16 @@
     "tabs": [
       {"tab": "Documentation", "groups": [
         {"group": "Start here", "pages": ["index", "quickstart", "installation"]},
-        {"group": "Guides", "pages": ["guides/create-task", "guides/authentication", "guides/errors", "guides/task-priority"]},
+        {
+          "group": "Guides",
+          "pages": [
+            "guides/tasks",
+            "guides/create-task",
+            "guides/authentication",
+            "guides/errors",
+            "guides/task-priority"
+          ]
+        },
         {"group": "Concepts", "pages": ["concepts/tasks", "demo-checklist"]}
       ]},
       {"tab": "API reference", "openapi": "openapi.json"}
