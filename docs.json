@@ -17,6 +17,7 @@
             "guides/authentication",
             "guides/errors",
             "guides/task-priority",
+            "guides/broken-links-test",
             "guides/grammer-check"
           ]
         },
