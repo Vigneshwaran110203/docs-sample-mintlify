@@ -50,7 +50,7 @@ mint openapi-check openapi.json
 
 Some features such as hosted search, domain configuration, web editor, authentication, and MCP are best demonstrated on the hosted site; `mint dev` is primarily the local content preview.
 
-## 5–8 minute manager demo
+## 5–8 minute demo
 
 1. Show the homepage and navigation.
 2. Open Quickstart and point out MDX components and code samples.
