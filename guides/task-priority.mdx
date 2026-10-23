@@ -1,0 +1,44 @@
+
+---
+title: "Task Priority"
+description: "Manage task priority in TaskFlow."
+---
+
+# Task Priority
+
+TaskFlow allows users to organize tasks by priority.
+
+## Available priorities
+
+Each task can have one of these priorities:
+
+- `low` — for tasks that can wait.
+- `medium` — for normal tasks.
+- `high` — for urgent tasks.
+
+## Update a task's priority
+
+Use the task priority endpoint to change the priority of an existing task.
+
+```bash
+curl -X PATCH \
+  https://api.taskflow.example/tasks/123/priority \
+  -H "Content-Type: application/json" \
+  -d '{"priority": "high"}'
+```
+
+## Request body
+
+| Field | Type | Description |
+|---|---|---|
+| `priority` | string | The new task priority: `low`, `medium`, or `high`. |
+
+## Example response
+
+```json
+{
+  "id": 123,
+  "title": "Prepare report",
+  "priority": "high"
+}
+```
