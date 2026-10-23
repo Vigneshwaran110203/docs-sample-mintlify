@@ -16,7 +16,8 @@
             "guides/create-task",
             "guides/authentication",
             "guides/errors",
-            "guides/task-priority"
+            "guides/task-priority",
+            "guides/grammer-check"
           ]
         },
         {"group": "Concepts", "pages": ["concepts/tasks", "demo-checklist"]}
