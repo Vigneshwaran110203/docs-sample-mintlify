@@ -18,7 +18,8 @@
             "guides/errors",
             "guides/task-priority",
             "guides/broken-links-test",
-            "guides/grammer-check"
+            "guides/grammer-check",
+            "guides/seo-test"
           ]
         },
         {"group": "Concepts", "pages": ["concepts/tasks", "demo-checklist"]}
