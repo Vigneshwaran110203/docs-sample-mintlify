@@ -2,33 +2,75 @@
   "$schema": "https://mintlify.com/docs.json",
   "name": "TaskFlow Developer Hub",
   "theme": "mint",
-  "colors": {"primary": "#5B5BD6", "light": "#7777E8", "dark": "#4545B5"},
+  "colors": {
+    "primary": "#5B5BD6",
+    "light": "#7777E8",
+    "dark": "#4545B5"
+  },
   "favicon": "/favicon.svg",
-  "logo": {"light": "/logo/light.svg", "dark": "/logo/dark.svg"},
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "navigation": {
     "tabs": [
-      {"tab": "Documentation", "groups": [
-        {"group": "Start here", "pages": ["index", "quickstart", "installation"]},
-        {
-          "group": "Guides",
-          "pages": [
-            "guides/tasks",
-            "guides/create-task",
-            "guides/authentication",
-            "guides/errors",
-            "guides/task-priority",
-            "guides/broken-links-test",
-            "guides/grammer-check",
-            "guides/seo-test"
-          ]
-        },
-        {"group": "Concepts", "pages": ["concepts/tasks", "demo-checklist"]}
-      ]},
-      {"tab": "API reference", "openapi": "openapi.json"}
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Start here",
+            "pages": [
+              "index",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/tasks",
+              "guides/create-task",
+              "guides/authentication",
+              "guides/errors",
+              "guides/task-priority",
+              "guides/broken-links-test",
+              "guides/grammer-check",
+              "guides/seo-test"
+            ]
+          },
+          {
+            "group": "Concepts",
+            "pages": [
+              "concepts/tasks",
+              "demo-checklist"
+            ]
+          },
+          {
+            "group": "Changelog",
+            "pages": [
+              "changelog"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API reference",
+        "openapi": "openapi.json"
+      }
     ]
   },
   "api": {
-    "playground": {"display": "interactive", "proxy": true},
-    "examples": {"languages": ["curl", "python", "javascript"], "defaults": "required"}
+    "playground": {
+      "display": "interactive",
+      "proxy": true
+    },
+    "examples": {
+      "languages": [
+        "curl",
+        "python",
+        "javascript"
+      ],
+      "defaults": "required"
+    }
   }
 }
