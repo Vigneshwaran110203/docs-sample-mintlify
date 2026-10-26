@@ -29,7 +29,8 @@
             "guides/seo-test"
           ]
         },
-        {"group": "Concepts", "pages": ["concepts/tasks", "demo-checklist"]}
+        {"group": "Concepts", "pages": ["concepts/tasks", "demo-checklist"]},
+        {"group": "Logs", "pages": ["changelog"]}
       ]},
       {"tab": "API reference", "openapi": "openapi.json"}
     ]
