@@ -1,6 +1,6 @@
 ---
 title: "Get a Task"
-description: "Retrieve a single task from TaskFlow with GET /tasks/1 and read the example response, including the task ID, title, and low, medium, or high priority."
+description: "Retrieve a single task from TaskFlow with GET /tasks/1 and read the example response, including the task ID, title, low, medium, or high priority, and due date."
 ---
 
 # Get a Task
@@ -13,8 +13,11 @@ Use `GET /tasks/1` to retrieve a task.
 {
   "id": 1,
   "title": "Prepare report",
-  "priority": "high"
+  "priority": "high",
+  "due_date": "2026-11-05"
 }
 ```
 
-The response contains the task ID, title, and priority. The `priority` field is a string set to `low`, `medium`, or `high`. See [Task priority](/guides/task-priority) to change it.
+The response contains the task ID, title, priority, and due date. The `priority` field is a string set to `low`, `medium`, or `high`. See [Task priority](/guides/task-priority) to change it.
+
+The `due_date` field is a string in `YYYY-MM-DD` format that shows when the task is due. For example, `2026-11-05` means the task is due on November 5, 2026.
